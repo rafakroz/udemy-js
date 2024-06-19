@@ -12,11 +12,27 @@ Desta maneira, criamos um objeto com suas propriedades.
 */
 
 const book = {
+
     bookTitle: 'Hábitos Atômicos',
     bookAuthor: 'James Clear',
     bookPages: 306,
     bookChapters: {
         chap1: 'Fundamentos',
         chap2: 'Primeira lei'
+    },
+
+    printBook: function(){
+
+        console.log('Imprimindo...');
+
     }
 };
+
+// Imprindo o autor no console
+console.log(book.bookAuthor);
+
+// Imprimindo o capítulo 1 no console
+console.log(book.bookChapters.chap1);
+
+// Invocando a função printBook
+book.printBook();
