@@ -14,7 +14,7 @@ console.log(clients1);
 
 let clients2 = [4, 2, 1, 3];
 
-// reverse inverte a ordem do itens.
+// reverse inverte a ordem do itens [4, 2, 1, 3] >> [3, 1, 2, 4].
 
 clients2.reverse();
 
