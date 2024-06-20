@@ -1,10 +1,9 @@
-console.log('Seção 5: Dia 4 - Aula 63');
+console.log('Seção 5: Dia 4 - Aula 64');
 console.log('Adicionando valores a uma array');
 console.log('-----------------------');
 
 /*
 */
-
 
 const num = [4, 7];
 
@@ -20,6 +19,15 @@ num.unshift(1, 2, 3);
 
 console.log(num);
 
-num.splice(1,0, 5, 6);
+const num2 = [4, 7];
 
-console.log(num);
+/*
+splice: Inserindo dados dentro de um intervalor
+1: índice inicial
+0: quantos itens serão deletados
+5, 6: itens inseridos
+*/
+
+num2.splice(1,0, 5, 6);
+
+console.log(num2);
