@@ -9,7 +9,7 @@ html {
     margin: 2rem auto;
     padding: 3rem 1.6rem 6rem 1.6rem;
     /* background: linear-gradient(30deg, #3dc0c0, #5bceae); */
-    background: linear-gradient(30deg, #1ba3a3, #2d9b7c);
+    background: linear-gradient(30deg, #86a5a5, #a0bbbb);
     border-radius: 4rem;
     box-shadow: 0 2px 2px lightgray;
   }
@@ -73,7 +73,7 @@ html {
     margin-top: 1.2rem;
     background: #eee;
     border-radius: 0.3rem;
-    outline-color: #5bceae;
+    outline-color: #1ba3a3;
   }
   
   .range::-webkit-slider-thumb {
@@ -81,7 +81,7 @@ html {
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-    background: #3dc0c0;
+    background: #1c9292;
     cursor: pointer;
   }
   
