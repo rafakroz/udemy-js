@@ -18,5 +18,11 @@ function update() {
 
     let valorCada = contaTotal / divisao;
 
-    console.log(valorCada);
+    document.getElementById('tipPercent').innerHTML = percentual + '%';
+
+    document.getElementById('totalWithTip').innerHTML = 'R$ ' + contaTotal;
+
+    document.getElementById('splitValue').innerHTML = divisao;
+
+    document.getElementById('billEach').innerHTML = 'R$ ' + valorCada;
 };
