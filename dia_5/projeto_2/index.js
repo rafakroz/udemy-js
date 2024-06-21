@@ -1,4 +1,10 @@
+function formatarValor(value) {
 
+    value = value.toFixed(2);
+
+    return 'R$ ' + value;
+
+};
 
 function update() {
 
@@ -19,10 +25,8 @@ function update() {
     let valorCada = contaTotal / divisao;
 
     document.getElementById('tipPercent').innerHTML = percentual + '%';
-
-    document.getElementById('totalWithTip').innerHTML = 'R$ ' + contaTotal;
-
+    document.getElementById('tipValue').innerHTML = formatarValor(valorGorjeta);
+    document.getElementById('totalWithTip').innerHTML = formatarValor(contaTotal);
     document.getElementById('splitValue').innerHTML = divisao;
-
-    document.getElementById('billEach').innerHTML = 'R$ ' + valorCada;
+    document.getElementById('billEach').innerHTML = formatarValor(valorCada);
 };
