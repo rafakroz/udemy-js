@@ -12,4 +12,11 @@ function update() {
     // Ao envolver com {}, exibe os inputs e os valores
     // console.log({conta, percentual, divisao});
 
+    let valorGorjeta = conta * (percentual / 100);
+
+    let contaTotal = conta + valorGorjeta;
+
+    let valorCada = contaTotal / divisao;
+
+    console.log(valorCada);
 };
