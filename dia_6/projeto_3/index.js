@@ -16,6 +16,16 @@ colors[]: para a cor do index x
 */
 btn.addEventListener('click', function(){
     document.body.style.background = colors[2];
+    const randomColor = getRandomColor();
+    console.log(randomColor);
 })
 
 // console.log(colors);
+
+/*
+Função para gerar números aleatórios
+Como são gerados números quebrados, ao multiplicar por 10, o limite será até 10
+*/
+function getRandomColor() {
+    return Math.random() * 10;
+};
