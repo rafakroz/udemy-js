@@ -1,7 +1,10 @@
 
-const colors = ['Red', 'Blue', 'Yellow', 'Purple', 'Green'];
+const colors = ['Red', 'Blue', 'Yellow', 'Purple', 'Green', 'Black', 'Brown', 'Gray', 'navy', '#544212'];
 
 const btn = document.getElementById('btn');
+
+// querySelector, definindo a class, ao invés de um id
+const color = document.querySelector('.color');
 
 /*
 btn.addEventListener: evento que monitora o btn
@@ -15,17 +18,20 @@ colors[]: para a cor do index x
 
 */
 btn.addEventListener('click', function(){
-    document.body.style.background = colors[2];
     const randomColor = getRandomColor();
+    document.body.style.background = colors[randomColor];
     console.log(randomColor);
+    // textContent: insere o valor à variável
+    color.textContent = colors[randomColor];
 })
-
-// console.log(colors);
 
 /*
 Função para gerar números aleatórios
-Como são gerados números quebrados, ao multiplicar por 10, o limite será até 10
+
+Math.floor: limita para números inteiros
+Math.random: gera números aleatórios
+* colors.lenght: limita os números para o tamanho do array
 */
 function getRandomColor() {
-    return Math.random() * 10;
+    return Math.floor(Math.random() * colors.length);
 };
