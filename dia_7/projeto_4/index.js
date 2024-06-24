@@ -22,27 +22,35 @@ function compareNumbers() {
     // Efetuando a comparação dos números
     if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
         document.querySelector('#textOutput').innerHTML = 'Seu número é muito alto!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está alto!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
         document.querySelector('#textOutput').innerHTML = 'Seu número é muito baixo!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está baixo!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
+        document.querySelector('#inputBox').value = '';
     }
     else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
         document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
+        document.querySelector('#inputBox').value = '';
     }
     else {
         document.querySelector('#textOutput').innerHTML = 'Parabéns! Você acertou!';
