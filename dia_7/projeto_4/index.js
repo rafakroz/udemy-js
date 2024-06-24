@@ -3,6 +3,10 @@ let userNumbers = [];
 let tentativas = 0;
 let MaxChutes = 7;
 
+function newGame() {
+    window.location.reload();
+};
+
 function init() {
     // gerando o número de 1 a 100
     // Por iniciar com 0, +1 determinar que irá até 100
@@ -20,10 +24,17 @@ function compareNumbers() {
     // O número é inserido no array e exibido no campo de chutes
     document.querySelector('#guesses').innerHTML = userNumbers;
 
+
     if (tentativas < MaxChutes) {
 
+        if (userNumber > 100 || userNumber < 0) {
+            window.alert('Tente um número entre 1 e 100!');
+            document.querySelector('#inputBox').value = '';
+            tentativas++
+            document.querySelector('#attempts').innerHTML = tentativas;
+        }
         // Efetuando a comparação dos números
-        if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
+        else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
             document.querySelector('#textOutput').innerHTML = 'Seu número é muito alto!';
             document.querySelector('#inputBox').value = '';
             // A cada if/else if, a tentativa é incrementada
@@ -77,11 +88,13 @@ function compareNumbers() {
             document.querySelector('#textOutput').innerHTML = 'Parabéns! Você acertou!';
             tentativas++
             document.querySelector('#attempts').innerHTML = tentativas;
+            document.querySelector('#inputBox').setAttribute('Readonly', 'Readonly');
         }
-
+        
     }
     else {
         document.querySelector('#textOutput').innerHTML = 'Você Perdeu! O número era: ' + computerNumber + '!';
+        document.querySelector('#inputBox').setAttribute('Readonly', 'Readonly');
     }
 
     
