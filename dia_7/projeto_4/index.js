@@ -10,12 +10,41 @@ function init() {
 };
 
 function compareNumbers() {
-    // capturando o número selecionado no input
-    const userNumber = Number(document.getElementById('inputBox').value);
+    // Capturando o número selecionado no input
+    const userNumber = Number(document.querySelector('#inputBox').value);
 
-    // inserindo o numero selecionado no array userNumbers
+    // Inserindo o numero selecionado no array userNumbers
     userNumbers.push(' ' + userNumber);
 
-    // o número é inserido no array e exibido no campo de chutes
-    document.getElementById('guesses').innerHTML = userNumbers;
+    // O número é inserido no array e exibido no campo de chutes
+    document.querySelector('#guesses').innerHTML = userNumbers;
+
+    // Efetuando a comparação dos números
+    if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
+        document.querySelector('#textOutput').innerHTML = 'Seu número é muito alto!';
+    }
+    else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está alto!';
+    }
+    else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
+    }
+    else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
+    }
+    else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
+        document.querySelector('#textOutput').innerHTML = 'Seu número é muito baixo!';
+    }
+    else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está baixo!';
+    }
+    else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
+    }
+    else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
+        document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
+    }
+    else {
+        document.querySelector('#textOutput').innerHTML = 'Parabéns! Você acertou!';
+    }
 }
