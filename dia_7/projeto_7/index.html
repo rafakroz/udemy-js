@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Advinhe o número</title>
+  </head>
+  <!-- 
+  onload: no momento em que carregar a paǵina, vai iniciar a função
+  -->
+  <body onload="init()">
+    <main>
+      <div id="welcomeScreen">
+        <h2>Advinhe o número <br />1 - 100</h2>
+      </div>
+
+      <div id="gameArea">
+        <section>
+          <h3 id="textOutput">Seu chute:</h3>
+          <input type="number" id="inputBox" min="1" max="100"/>
+        </section>
+        <section class="stats">
+          <div class="info">
+            <p>Número de tentativas:</p>
+            <span id="attempts">0</span>
+          </div>
+          <div class="info">
+            <p>Seus chutes:</p>
+            <span id="guesses">0</span>
+          </div>
+        </section>
+        <button id="newGameButton">NOVO JOGO</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
