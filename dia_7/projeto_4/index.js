@@ -11,7 +11,7 @@ function init() {
     // gerando o número de 1 a 100
     // Por iniciar com 0, +1 determinar que irá até 100
     computerNumber = Math.floor(Math.random() * 100 + 1);
-    console.log(computerNumber)
+    // console.log(computerNumber);
 };
 
 function compareNumbers() {
@@ -24,13 +24,13 @@ function compareNumbers() {
     // O número é inserido no array e exibido no campo de chutes
     document.querySelector('#guesses').innerHTML = userNumbers;
 
-
     if (tentativas < MaxChutes) {
 
         if (userNumber > 100 || userNumber < 0) {
             window.alert('Tente um número entre 1 e 100!');
+            document.querySelector('#textOutput').innerHTML = 'Tente um número entre 1 e 100!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         // Efetuando a comparação dos números
@@ -38,55 +38,55 @@ function compareNumbers() {
             document.querySelector('#textOutput').innerHTML = 'Seu número é muito alto!';
             document.querySelector('#inputBox').value = '';
             // A cada if/else if, a tentativa é incrementada
-            tentativas++
+            tentativas++;
             // Em seguida, insere o número no campo
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está alto!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber > computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 20)) {
             document.querySelector('#textOutput').innerHTML = 'Seu número é muito baixo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) >= 10)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está baixo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) == 1)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está bem próximo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else if (userNumber < computerNumber && (Math.abs((userNumber - computerNumber)) < 10)){
             document.querySelector('#textOutput').innerHTML = 'Seu número está próximo!';
             document.querySelector('#inputBox').value = '';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
         }
         else {
             document.querySelector('#textOutput').innerHTML = 'Parabéns! Você acertou!';
-            tentativas++
+            tentativas++;
             document.querySelector('#attempts').innerHTML = tentativas;
             document.querySelector('#inputBox').setAttribute('Readonly', 'Readonly');
         }
